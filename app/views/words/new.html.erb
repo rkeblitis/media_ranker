@@ -1,0 +1,16 @@
+<h1>AHHHH NEW WORD FORM</h1>
+
+<%= form_for @word do |f| %>
+
+    <%= f.label :word %>
+    <%= f.text_field :word %><br>
+
+    <%= f.label :language %>
+    <%= f.text_field :language %><br>
+
+    <%= f.label :definition %>
+    <%= f.text_field :definition %><br>
+
+    <%= f.submit "Submit" %>
+    <!-- it defaults to the restful route that it is in, it used reasoures -->
+  <% end %>

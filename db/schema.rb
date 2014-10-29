@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141027211025) do
     t.datetime "updated_at"
   end
 
-  create_table "books", force: true do |t|
+  create_table "memes", force: true do |t|
     t.string   "name"
     t.string   "author"
     t.text     "description"
@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(version: 20141027211025) do
     t.datetime "updated_at"
   end
 
-  create_table "movies", force: true do |t|
-    t.string   "name"
-    t.string   "director"
-    t.text     "description"
+  create_table "words", force: true do |t|
+    t.string   "word"
+    t.string   "language"
+    t.text     "definition"
     t.integer  "ranking"
     t.datetime "created_at"
     t.datetime "updated_at"

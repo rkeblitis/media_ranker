@@ -1,7 +1,25 @@
 Rails.application.routes.draw do
 
   # Home Controller
-  get "/home/index",  to:"home#index"
+  root  "home#index"
+
+  # Memes Controller
+  # get "/memes"  ,to: "memes#index"  ,as: :memes
+  # post "/memes" ,to: "memes#create"
+
+
+  # Words Controller
+  get   "/words"          ,to: "words#index"    ,as: :words
+  post  "/words"          ,to: "words#create"
+  get   "/words/new"      ,to: "words#new"      ,as: :new_word
+  # post  "/words/new"      ,to: "words#create"
+
+
+
+
+  # Albums Controller
+  # get "/albums" ,to: "albums#index" ,as: :albums
+  # post "/albums" ,to:"albums#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
