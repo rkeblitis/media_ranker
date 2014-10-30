@@ -24,6 +24,12 @@ class WordsController < ApplicationController
     find_word
   end
 
+  def update
+    if @word = find_word.update(word_params)
+      redirect_to words_path
+    end
+  end
+
   def destroy
     if find_word.destroy
       redirect_to words_path

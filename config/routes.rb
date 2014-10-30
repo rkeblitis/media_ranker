@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   # Words Controller
   get   "/words"          ,to: "words#index"    ,as: :words
   post  "/words"          ,to: "words#create"
-  get   "/words/new"      ,to: "words#new"      ,as: :new_word
   get   "word/:id"        ,to: "words#show"     ,as: :word
-  get   "word/:id/edit"   ,to: "words#edit"   ,as: :edit_word
+  patch "word/:id"        ,to: "words#update"    
+  get   "/words/new"      ,to: "words#new"      ,as: :new_word
+  get   "word/:id/edit"   ,to: "words#edit"     ,as: :edit_word
   patch "word/:id/edit"   ,to: "words#destroy"
   patch "word/:id/edit"   ,to: "words#upvote"
 
