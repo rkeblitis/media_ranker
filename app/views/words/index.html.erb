@@ -1,7 +1,14 @@
 <!-- list all the word here-->
 <!-- add button that adds new word to data base -->
 <!-- have a link that directs back to homepage -->
+<!--  create a table table to show all words, language, definition, ect-->
 
 <h2>Words</h2>
+
+<%@word.each do |word| %>
+  <h3><%= link_to(word.word, word_path(word.id)) %></h3>
+
+<%end %>
+
 
 <%= button_to "Add Word", new_word_path, method: :get %>

@@ -1,0 +1,12 @@
+<!-- this page show indivual words based on id -->
+
+<h1><%= @word.word %></h1>
+<h3><%= @word.language %></h3>
+<h2><%= @word.definition %></h2>
+<h4><%= @word.ranking %></h4>
+
+<%= button_to "Upvote", new_word_path, method: :get %>
+<%= button_to "Edit", edit_word_path, method: :get %>
+<%= button_to "Delete", edit_word_path, method: :patch %>
+<%= button_to "All Words", words_path, method: :get %>
+<%= button_to "Home", root_path, method: :get %>

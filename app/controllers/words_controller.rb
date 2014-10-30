@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
 
   def index
-
+    @word = Word.all
 
   end
 
@@ -16,8 +16,29 @@ class WordsController < ApplicationController
     end
   end
 
+  def show
+    find_word
+  end
+
+  def edit
+    find_word
+  end
+
+  def destroy
+    if find_word.destroy
+      redirect_to words_path
+    end
+  end
+
+
+  private
+
   def word_params
     params.require(:word).permit(:word, :language, :definition)
+  end
+
+  def find_word
+    @word = Word.find(params[:id])
   end
 
 end
