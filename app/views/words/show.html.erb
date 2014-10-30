@@ -5,7 +5,7 @@
 <h2><%= @word.definition %></h2>
 <h4><%= @word.ranking %></h4>
 
-<%= button_to "Upvote", new_word_path, method: :get %>
+<%= button_to "Upvote", upvote_word_path(@word), method: :patch %>
 <%= button_to "Edit", edit_word_path, method: :get %>
 <%= button_to "Delete", edit_word_path, method: :patch %>
 <%= button_to "All Words", words_path, method: :get %>

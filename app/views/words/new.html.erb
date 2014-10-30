@@ -11,6 +11,8 @@
     <%= f.label :definition %>
     <%= f.text_field :definition %><br>
 
+    <%= f.hidden_field(:ranking, value: 0) %>
+
     <%= f.submit "Submit" %>
     <!-- it defaults to the restful route that it is in, it used reasoures -->
   <% end %>

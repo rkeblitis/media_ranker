@@ -12,11 +12,12 @@ Rails.application.routes.draw do
   get   "/words"          ,to: "words#index"    ,as: :words
   post  "/words"          ,to: "words#create"
   get   "word/:id"        ,to: "words#show"     ,as: :word
-  patch "word/:id"        ,to: "words#update"    
+  patch "word/:id"        ,to: "words#update"
+  patch "word/:id/upvote" ,to: "words#upvote"   ,as: :upvote_word
   get   "/words/new"      ,to: "words#new"      ,as: :new_word
   get   "word/:id/edit"   ,to: "words#edit"     ,as: :edit_word
   patch "word/:id/edit"   ,to: "words#destroy"
-  patch "word/:id/edit"   ,to: "words#upvote"
+  # patch "word/:id/edit"   ,to: "words#upvote"
 
   # get  "word/:id/edit"   ,to: "words#destroy"
   #

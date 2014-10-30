@@ -26,8 +26,14 @@ class WordsController < ApplicationController
 
   def update
     if @word = find_word.update(word_params)
-      redirect_to words_path
+      redirect_to word_path
     end
+  end
+
+  def upvote
+    # if upvote button is pressed than the ranking increased by 1
+      find_word.update(ranking: @word.ranking + 1)
+      redirect_to word_path
   end
 
   def destroy
@@ -40,7 +46,7 @@ class WordsController < ApplicationController
   private
 
   def word_params
-    params.require(:word).permit(:word, :language, :definition)
+    params.require(:word).permit(:word, :language, :definition, :ranking)
   end
 
   def find_word
