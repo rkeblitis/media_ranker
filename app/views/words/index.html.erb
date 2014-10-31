@@ -4,11 +4,22 @@
 <!--  create a table table to show all words, language, definition, ect-->
 
 <h2>Words</h2>
+<table class="table">
+  <table>
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
 
-<%@word.each do |word| %>
-  <h3><%= link_to(word.word, word_path(word.id)) %></h3>
-
-<%end %>
-
+<% @word.each do |word| %>
+    <tr <% link_to word_path(word.id) %> >
+      <td>Ranked:<%= word.ranking %></td>
+      <td><%= word.word %></td>
+      <td><%= button_to "Upvote", upvote_word_path(word), method: :patch %></td>
+    </tr>
+<% end %>
+  </table>
 
 <%= button_to "Add Word", new_word_path, method: :get %>
+<%= button_to "Home", root_path, method: :get %>
