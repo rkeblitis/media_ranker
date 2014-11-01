@@ -3,25 +3,29 @@ Rails.application.routes.draw do
   # Home Controller
   root  "home#index"
 
-  # Memes Controller
-  # get "/memes"  ,to: "memes#index"  ,as: :memes
-  # post "/memes" ,to: "memes#create"
+  # Memes Routes
+  get   "/memes"            ,to: "memes#index"    ,as: :memes
+  post  "/memes"            ,to: "memes#create"
+  get   "/meme/:id"         ,to: "memes#show"     ,as: :meme
+  patch "/meme/:id"         ,to: "memes#update"
+  patch "/meme/:id/upvote"  ,to: "memes#upvote"   ,as: :upvote_meme
+  get   "/memes/new"        ,to: "memes#new"      ,as: :new_meme
+  get   "/meme/:id/edit"    ,to: "memes#edit"     ,as: :edit_meme
+  patch "/meme/:id/edit"    ,to: "memes#destroy"
 
 
-  # Words Controller
-  get   "/words"          ,to: "words#index"    ,as: :words
-  post  "/words"          ,to: "words#create"
-  get   "word/:id"        ,to: "words#show"     ,as: :word
-  patch "word/:id"        ,to: "words#update"
-  patch "word/:id/upvote" ,to: "words#upvote"   ,as: :upvote_word
-  get   "/words/new"      ,to: "words#new"      ,as: :new_word
-  get   "word/:id/edit"   ,to: "words#edit"     ,as: :edit_word
-  patch "word/:id/edit"   ,to: "words#destroy"
-  # patch "word/:id/edit"   ,to: "words#upvote"
 
-  # get  "word/:id/edit"   ,to: "words#destroy"
-  #
-  #
+  # Words Routes
+  get   "/words"            ,to: "words#index"    ,as: :words
+  post  "/words"            ,to: "words#create"
+  get   "/word/:id"         ,to: "words#show"     ,as: :word
+  patch "/word/:id"         ,to: "words#update"
+  patch "/word/:id/upvote"  ,to: "words#upvote"   ,as: :upvote_word
+  get   "/words/new"        ,to: "words#new"      ,as: :new_word
+  get   "/word/:id/edit"    ,to: "words#edit"     ,as: :edit_word
+  patch "/word/:id/edit"    ,to: "words#destroy"
+
+
 
 
   # Albums Controller

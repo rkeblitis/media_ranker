@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MediaRanker</title>
+  <title>List-O-meter</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <h1>
-  <%=link_to "Ranking Stuff", root_path , :class => "heading"%>
+  <%=link_to "List-O-meter", root_path , :class => "heading"%>
 
 </h1>
-  <h3>Best Of</h3>
+  <h3>Listing Things of since 2014</h3>
 <%= yield %>
 
 </body>
