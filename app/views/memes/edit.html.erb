@@ -1,1 +1,18 @@
-<h1>Edit <%= @meme.meme %></h1>
+<h1>Edit <%= @meme.name %></h1>
+
+
+<%= form_for @meme do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :author %>
+    <%= f.text_field :author %><br>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %><br>
+
+
+    <%= f.submit "Submit" %>
+    <!-- it defaults to the restful route that it is in, it used reasoures -->
+  <% end %>

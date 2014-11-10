@@ -25,6 +25,18 @@ Rails.application.routes.draw do
   get   "/word/:id/edit"    ,to: "words#edit"     ,as: :edit_word
   patch "/word/:id/edit"    ,to: "words#destroy"
 
+  # Albums Routes
+  get   "/albums"            ,to: "albums#index"    ,as: :albums
+  post  "/albums"            ,to: "albums#create"
+  get   "/album/:id"         ,to: "albums#show"     ,as: :album
+  patch "/album/:id"         ,to: "albums#update"
+  patch "/album/:id/upvote"  ,to: "albums#upvote"   ,as: :upvote_album
+  get   "/albums/new"        ,to: "albums#new"      ,as: :new_album
+  get   "/album/:id/edit"    ,to: "albums#edit"     ,as: :edit_album
+  patch "/album/:id/edit"    ,to: "albums#destroy"
+
+
+
 
 
 

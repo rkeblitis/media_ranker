@@ -1,7 +1,6 @@
-<h1>AHHHH NEW meme FORM</h1>
+<h1>Edit <%= @album.name %></h1>
 
-
-<%= form_for @meme do |f| %>
+<%= form_for @album do |f| %>
 
     <%= f.label :name %>
     <%= f.text_field :name %><br>
@@ -9,10 +8,9 @@
     <%= f.label :recorder %>
     <%= f.text_field :recorder %><br>
 
-    <%= f.label :ddescription %>
+    <%= f.label :description %>
     <%= f.text_field :description %><br>
 
-    <%= f.hidden_field(:ranking, value: 0) %>
 
     <%= f.submit "Submit" %>
     <!-- it defaults to the restful route that it is in, it used reasoures -->

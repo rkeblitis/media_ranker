@@ -1,12 +1,15 @@
 <!-- This page will list a few things from each catorgory with a link that will list more -->
 
-<h2>Favoirte Words</h2>
+<h2>Favoirte Things</h2>
 
 <%@word.each do |word| %>
   <h3><%= link_to(word.word, word_path(word.id)) %></h3>
-
 <%end %>
 
+<%@album.each do |album| %>
+  <h3><%= link_to(album.name, album_path(album.id)) %></h3>
+<%end %>
 
-
-<!-- how has does word_path able to pass an argument -->
+<%@meme.each do |meme| %>
+  <h3><%= link_to(meme.name, meme_path(meme.id)) %></h3>
+<%end %>

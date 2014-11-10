@@ -1,0 +1,12 @@
+<!-- this page show indivual albums based on id -->
+
+<h1><%= @album.name %></h1>
+<h3><%= @album.recorder %></h3>
+<h2><%= @album.description %></h2>
+<h4><%= @album.ranking %></h4>
+
+<%= button_to "Upvote", upvote_album_path(@album), method: :patch %>
+<%= button_to "Edit", edit_album_path, method: :get %>
+<%= button_to "Delete", edit_album_path, method: :patch %>
+<%= button_to "All albums", albums_path, method: :get %>
+<%= button_to "Home", root_path, method: :get %>
