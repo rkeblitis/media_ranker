@@ -1,0 +1,28 @@
+<!-- list all the pictures here-->
+<!-- add button that adds new picture to data base -->
+<!-- have a link that directs back to homepage -->
+<h2>pictures</h2>
+<!-- list all the picture here-->
+<!-- add button that adds new picture to data base -->
+<!-- have a link that directs back to homepage -->
+<!--  create a table table to show all pictures, language, definition, ect-->
+
+<h2>Pictures</h2>
+<table class="table-hover table-responsive col-sm-12">
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
+
+<% @picture.each do |picture| %>
+    <tr>
+      <td>Ranked:<%= picture.ranking %></td>
+      <td><%= link_to picture.name, picture_path(picture.id)  %></td>
+      <td><%= button_to "Upvote", upvote_picture_path(picture), method: :patch %></td>
+    </tr>
+<% end %>
+  </table>
+
+<%= button_to "Add picture", new_picture_path, method: :get %>
+<%= button_to "Home", root_path, method: :get %>

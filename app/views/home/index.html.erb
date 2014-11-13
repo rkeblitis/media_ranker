@@ -1,15 +1,23 @@
 <!-- This page will list a few things from each catorgory with a link that will list more -->
 
-<h2>Favoirte Things</h2>
+<h1>Favoirte Things</h1>
+<div id="links">
+  <%= link_to "Add Word", new_word_path, method: :get %>
+  <%= link_to "Add Album", new_album_path, method: :get %>
+  <%= link_to "Add Picture", new_picture_path, method: :get %>
+</div>
+
+
+<h2>Words</h2>
 
 <%@word.each do |word| %>
   <h3><%= link_to(word.word, word_path(word.id)) %></h3>
 <%end %>
-
+<h2>Albums</h2>
 <%@album.each do |album| %>
   <h3><%= link_to(album.name, album_path(album.id)) %></h3>
 <%end %>
-
-<%@meme.each do |meme| %>
-  <h3><%= link_to(meme.name, meme_path(meme.id)) %></h3>
+<h2>Pictures</h2>
+<%@picture.each do |picture| %>
+  <a href="<%= picture_path(picture.id) %>" ><img src="<%= picture.url %>" height="60" width="60">
 <%end %>

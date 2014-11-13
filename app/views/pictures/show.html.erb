@@ -1,0 +1,14 @@
+<!-- this page show indivual pictures based on id -->
+<!-- this page show indivual pictures based on id -->
+
+<h1><%= @picture.name %></h1>
+<h3><img src="<%= @picture.url %>" alt="Alien Fish" height="250" width="250">
+</h3>
+<h2><%= @picture.description %></h2>
+<h4><%= @picture.ranking %></h4>
+
+<%= button_to "Upvote", upvote_picture_path(@picture), method: :patch %>
+<%= button_to "Edit", edit_picture_path, method: :get %>
+<%= button_to "Delete", edit_picture_path, method: :patch %>
+<%= button_to "All Pictures", pictures_path, method: :get %>
+<%= button_to "Home", root_path, method: :get %>

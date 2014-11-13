@@ -1,8 +1,8 @@
-class CreateMemes < ActiveRecord::Migration
+class CreatePictures < ActiveRecord::Migration
   def change
-    create_table :memes do |t|
+    create_table :pictures do |t|
       t.string :name
-      t.string :author
+      t.string :url
       t.text :description
       t.integer :ranking
 

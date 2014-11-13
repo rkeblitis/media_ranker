@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20141027211025) do
     t.datetime "updated_at"
   end
 
-  create_table "memes", force: true do |t|
+  create_table "pictures", force: true do |t|
     t.string   "name"
-    t.string   "author"
+    t.string   "url"
     t.text     "description"
     t.integer  "ranking"
     t.datetime "created_at"

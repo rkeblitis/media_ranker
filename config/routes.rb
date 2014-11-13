@@ -3,15 +3,15 @@ Rails.application.routes.draw do
   # Home Controller
   root  "home#index"
 
-  # Memes Routes
-  get   "/memes"            ,to: "memes#index"    ,as: :memes
-  post  "/memes"            ,to: "memes#create"
-  get   "/meme/:id"         ,to: "memes#show"     ,as: :meme
-  patch "/meme/:id"         ,to: "memes#update"
-  patch "/meme/:id/upvote"  ,to: "memes#upvote"   ,as: :upvote_meme
-  get   "/memes/new"        ,to: "memes#new"      ,as: :new_meme
-  get   "/meme/:id/edit"    ,to: "memes#edit"     ,as: :edit_meme
-  patch "/meme/:id/edit"    ,to: "memes#destroy"
+  # pictures Routes
+  get   "/pictures"            ,to: "pictures#index"    ,as: :pictures
+  post  "/pictures"            ,to: "pictures#create"
+  get   "/picture/:id"         ,to: "pictures#show"     ,as: :picture
+  patch "/picture/:id"         ,to: "pictures#update"
+  patch "/picture/:id/upvote"  ,to: "pictures#upvote"   ,as: :upvote_picture
+  get   "/pictures/new"        ,to: "pictures#new"      ,as: :new_picture
+  get   "/picture/:id/edit"    ,to: "pictures#edit"     ,as: :edit_picture
+  patch "/picture/:id/edit"    ,to: "pictures#destroy"
 
 
 
