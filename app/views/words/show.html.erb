@@ -1,12 +1,20 @@
 <!-- this page show indivual words based on id -->
+<div class="container">
+  <div>
+    <h1><%= @word.word %></h1>
+    <h3><%= @word.language %></h3>
+    <h2><%= @word.definition %></h2>
+    <h4>Ranking : <%= @word.ranking %></h4>
+  </div>
 
-<h1><%= @word.word %></h1>
-<h3><%= @word.language %></h3>
-<h2><%= @word.definition %></h2>
-<h4><%= @word.ranking %></h4>
+  <!-- <div class="buttons"> -->
+    <!-- <button class="btn btn-default" > -->
+    <%= button_to "Upvote", upvote_word_path(@word), method: :patch %>
+    <%= button_to "Edit", edit_word_path, method: :get %>
+    <%= button_to "Delete", edit_word_path, method: :patch %>
+    <%= button_to "All Words", words_path, method: :get %>
+  <%= button_to   "Home", root_path, method: :get %>
+  <!-- </button> -->
+<!-- </div> -->
 
-<%= button_to "Upvote", upvote_word_path(@word), method: :patch %>
-<%= button_to "Edit", edit_word_path, method: :get %>
-<%= button_to "Delete", edit_word_path, method: :patch %>
-<%= button_to "All Words", words_path, method: :get %>
-<%= button_to "Home", root_path, method: :get %>
+</div>
