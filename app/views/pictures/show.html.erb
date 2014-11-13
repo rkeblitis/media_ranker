@@ -5,7 +5,7 @@
 <h3><img src="<%= @picture.url %>" alt="<%= @picture.name %>" height="250" width="250">
 </h3>
 <h2><%= @picture.description %></h2>
-<h4><%= @picture.ranking %></h4>
+<h4>Ranking: <%= @picture.ranking %></h4>
 
 <%= button_to "Upvote", upvote_picture_path(@picture), method: :patch %>
 <%= button_to "Edit", edit_picture_path, method: :get %>
