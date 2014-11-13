@@ -1,4 +1,19 @@
 body {
   margin: auto;
   text-align: center;
+  font-family: 'Josefin Slab', cursive;
+}
+
+.headerDescription {
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 2px;
+}
+
+
+h3 {
+  font-size: 22px;
+}
+
+.links a {
+  margin: 30px;
 }

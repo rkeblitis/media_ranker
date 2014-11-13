@@ -2,31 +2,31 @@
 
 <body>
   <div class="container">
-  <div id="links">
+  <div class="links">
     <%= link_to "Add Word", new_word_path, method: :get %>
     <%= link_to "Add Album", new_album_path, method: :get %>
     <%= link_to "Add Picture", new_picture_path, method: :get %>
   </div>
 <span class="homeIndex">
-  <div class="words col-md-4">
+  <div class="col-md-4">
     <h2>Words</h2>
 
     <%@word.each do |word| %>
-      <h3><%= link_to(word.word, word_path(word.id)) %></h3>
+      <h3 class="words"><%= link_to(word.word, word_path(word.id)) %></h3>
     <%end %>
   </div>
 
-  <div class="picutres col-md-4">
+  <div class="col-md-4">
     <h2>Pictures</h2>
     <%@picture.each do |picture| %>
-      <a href="<%= picture_path(picture.id) %>" ><img src="<%= picture.url %>" alt="<%= picture.name %>" height="60" width="60" class="img-circle"/>
+      <a class="pictures" href="<%= picture_path(picture.id) %>" ><img src="<%= picture.url %>" alt="<%= picture.name %>" height="60" width="60" class="img-circle"/>
     <%end %>
   </div>
 
-  <div class="albums col-md-4">
+  <div class="col-md-4">
     <h2>Albums</h2>
     <%@album.each do |album| %>
-      <h3><%= link_to(album.name, album_path(album.id)) %></h3>
+      <h3 class="albums"><%= link_to(album.name, album_path(album.id)) %></h3>
     <%end %>
   </div>
 
