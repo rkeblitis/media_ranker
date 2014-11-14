@@ -20,6 +20,7 @@
   <div class="col-md-4">
     <h2>Pictures</h2>
     <%@picture.each do |picture| %>
+      <%= image_tag picture.uploader_url(:thumb).to_s %>
       <a class="pictures" href="<%= picture_path(picture.id) %>" ><img src="<%= picture.url %>" alt="<%= picture.name %>" height="60" width="60" class="img-circle"/>
     <%end %>
   </div>

@@ -11,9 +11,15 @@ class PicturesController < ApplicationController
   end
 
   def create
-    if Picture.create(picture_params)
-      redirect_to root_path
-    end
+    pic = Picture.new
+    pic.name = params[:picture][:name]
+    pic.uploader = params[:picture][:uploader]
+    pic.save
+
+    # if Picture.create(picture_params)
+    #   # uploader = PictureUploadUploader
+    #   redirect_to root_path
+    # end
   end
 
   def show
@@ -46,7 +52,7 @@ class PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:name, :url, :description, :ranking)
+    params.require(:picture).permit(:name, :url, :description, :ranking, :uploader)
   end
 
   def find_picture
