@@ -12,3 +12,13 @@
 <%= button_to "Delete", edit_picture_path, method: :patch %>
 <%= button_to "All Pictures", pictures_path, method: :get %>
 <%= button_to "Home", root_path, method: :get %>
+
+
+in the show
+<%= image_tag picture.image_url(:thumb).to_s %>
+
+process :sccale => [200,300]
+
+version :thumb do
+process :scale => [50,50]
+end

@@ -1,7 +1,7 @@
 <h1>AHHHH New Picture Form</h1>
 
 
-<%= form_for @picture do |f| %>
+<%= form_for @picture, :html => {:multipart => true} do |f| %>
 
     <%= f.label :name %>
     <%= f.text_field :name %><br>
@@ -11,6 +11,11 @@
 
     <%= f.label :description %>
     <%= f.text_field :description %><br>
+
+    <%= f.file_field :image %><br>
+
+    <%= f.label :remote_image_url "Or image url" %>
+    <%= f.text_field :remote_image_url %><br>
 
     <%= f.hidden_field(:ranking, value: 0) %>
 
