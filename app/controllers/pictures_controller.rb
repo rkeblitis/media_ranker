@@ -11,15 +11,10 @@ class PicturesController < ApplicationController
   end
 
   def create
-    pic = Picture.new
-    pic.name = params[:picture][:name]
-    pic.uploader = params[:picture][:uploader]
-    pic.save
-
-    # if Picture.create(picture_params)
-    #   # uploader = PictureUploadUploader
-    #   redirect_to root_path
-    # end
+     if Picture.create(picture_params)
+       # uploader = PictureUploadUploader
+       redirect_to root_path
+     end
   end
 
   def show

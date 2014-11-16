@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # Home Controller
   root  "home#index"
 
-  # pictures Routes
+  # Pictures Routes
   get   "/pictures"            ,to: "pictures#index"    ,as: :pictures
   post  "/pictures"            ,to: "pictures#create"
   get   "/picture/:id"         ,to: "pictures#show"     ,as: :picture
@@ -16,24 +16,24 @@ Rails.application.routes.draw do
 
 
   # Words Routes
-  get   "/words"            ,to: "words#index"    ,as: :words
-  post  "/words"            ,to: "words#create"
-  get   "/word/:id"         ,to: "words#show"     ,as: :word
-  patch "/word/:id"         ,to: "words#update"
-  patch "/word/:id/upvote"  ,to: "words#upvote"   ,as: :upvote_word
-  get   "/words/new"        ,to: "words#new"      ,as: :new_word
-  get   "/word/:id/edit"    ,to: "words#edit"     ,as: :edit_word
-  patch "/word/:id/edit"    ,to: "words#destroy"
+  get   "/words"               ,to: "words#index"    ,as: :words
+  post  "/words"               ,to: "words#create"
+  get   "/word/:id"            ,to: "words#show"     ,as: :word
+  patch "/word/:id"            ,to: "words#update"
+  patch "/word/:id/upvote"     ,to: "words#upvote"   ,as: :upvote_word
+  get   "/words/new"           ,to: "words#new"      ,as: :new_word
+  get   "/word/:id/edit"       ,to: "words#edit"     ,as: :edit_word
+  patch "/word/:id/edit"       ,to: "words#destroy"
 
   # Albums Routes
-  get   "/albums"            ,to: "albums#index"    ,as: :albums
-  post  "/albums"            ,to: "albums#create"
-  get   "/album/:id"         ,to: "albums#show"     ,as: :album
-  patch "/album/:id"         ,to: "albums#update"
-  patch "/album/:id/upvote"  ,to: "albums#upvote"   ,as: :upvote_album
-  get   "/albums/new"        ,to: "albums#new"      ,as: :new_album
-  get   "/album/:id/edit"    ,to: "albums#edit"     ,as: :edit_album
-  patch "/album/:id/edit"    ,to: "albums#destroy"
+  get   "/albums"              ,to: "albums#index"    ,as: :albums
+  post  "/albums"              ,to: "albums#create"
+  get   "/album/:id"           ,to: "albums#show"     ,as: :album
+  patch "/album/:id"           ,to: "albums#update"
+  patch "/album/:id/upvote"    ,to: "albums#upvote"   ,as: :upvote_album
+  get   "/albums/new"          ,to: "albums#new"      ,as: :new_album
+  get   "/album/:id/edit"      ,to: "albums#edit"     ,as: :edit_album
+  patch "/album/:id/edit"      ,to: "albums#destroy"
 
 
 
